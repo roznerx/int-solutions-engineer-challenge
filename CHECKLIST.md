@@ -10,20 +10,20 @@ Requirements taken from `README.md`, grouped by the branch where each one is wor
 - [x] Container snippet installed in the right place (`index.html`, head script and body noscript)
 - [x] Empty container version published before using Preview
 - [x] GA4 connected from GTM (Google tag, Initialization – All Pages)
-- [ ] `LOG.md` copied from `LOG.md.example` (template file kept)
+- [x] `LOG.md` copied from `LOG.md.example` (template file kept)
 
 ## Part 1 · Exercise 1: Add to cart (`exercise/gtm-add-to-cart`)
 
-- [ ] dataLayer pushes in `website/` are not modified
-- [ ] GTM reacts to the existing `ga4.trackEvent` push with `eventName: add_to_cart`
-- [ ] New `dataLayer.push` uses the GA4 recommended `add_to_cart` structure (`event`, `ecommerce.value`, `ecommerce.currency`, `ecommerce.items`)
-- [ ] Values come from the dataLayer at click time, with no catalog hardcoded in the tag
-- [ ] Every item keeps its original fields (`item_id`, `item_name`, `item_brand`, `price`, `item_category`, `item_variant`, `quantity`)
-- [ ] Every item gets `tax` = 21% of its unit price, rounded to 2 decimals
-- [ ] Beach Boat output matches the README example exactly (`value` 8.47, `tax` 1.47)
-- [ ] At least one other price verified, including $5.95
-- [ ] `add_to_cart` sent to GA4
-- [ ] DebugView shows the event with value, currency and items
+- [x] dataLayer pushes in `website/` are not modified
+- [x] GTM reacts to the existing `ga4.trackEvent` push with `eventName: add_to_cart`
+- [x] New `dataLayer.push` uses the GA4 recommended `add_to_cart` structure (`event`, `ecommerce.value`, `ecommerce.currency`, `ecommerce.items`)
+- [x] Values come from the dataLayer at click time, with no catalog hardcoded in the tag
+- [x] Every item keeps its original fields (`item_id`, `item_name`, `item_brand`, `price`, `item_category`, `item_variant`, `quantity`)
+- [x] Every item gets `tax` = 21% of its unit price, rounded to 2 decimals
+- [x] Beach Boat output matches the README example exactly (`value` 8.47, `tax` 1.47)
+- [x] At least one other price verified, including $5.95
+- [x] `add_to_cart` sent to GA4
+- [x] DebugView shows the event with value, currency and items
 
 ## Part 1 · Exercise 2: Newsletter (`exercise/newsletter-tracking`)
 
@@ -43,7 +43,7 @@ Requirements taken from `README.md`, grouped by the branch where each one is wor
 - [ ] Explains why the approaches in Exercises 1 and 2 are worth doing
 - [ ] Pasted into `LOG.md`
 - [ ] "How you validated" section filled in (Preview and DebugView, both events)
-- [ ] Container ID and measurement ID in `LOG.md`
+- [x] Container ID and measurement ID in `LOG.md`
 
 ## Part 2: Apps Script (`exercise/apps-script`)
 
@@ -66,7 +66,7 @@ Requirements taken from `README.md`, grouped by the branch where each one is wor
 
 ## Submission (`main`)
 
-- [ ] Container exported (Admin → Export Container) and the `.json` committed
+- [x] Container exported (Admin → Export Container) and the `.json` committed
 - [ ] GTM container shared with `douglas.franquiz@monks.com` and `ivan.pfaab@monks.com` (Edit or higher)
 - [ ] GA4 property shared with both (Editor or higher)
 - [ ] Sheet shared with both (edit access)
