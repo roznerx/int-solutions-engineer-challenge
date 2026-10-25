@@ -53,11 +53,11 @@ Requirements taken from `README.md`, grouped by the branch where each one is wor
 - [x] `Validaciones` menu with `Conteo` and `Alias`, visible after a reload
 - [x] Ex 1: any edit writes the date and time into B1, replacing the previous value
 - [x] Ex 1: the B1 write does not cause an update loop
-- [ ] Ex 2: function takes one 50-letter hash
-- [ ] Ex 2: finds the longest contiguous strictly increasing run (letters need not be adjacent in the alphabet)
-- [ ] Ex 2: the winning run contains at least one vowel
-- [ ] Ex 2: `acbcrxorzeh` → 3
-- [ ] Ex 2: length written to column E for every employee, run from Validaciones → Conteo
+- [x] Ex 2: function takes one 50-letter hash
+- [x] Ex 2: finds the longest contiguous strictly increasing run (letters need not be adjacent in the alphabet)
+- [x] Ex 2: the winning run contains at least one vowel
+- [x] Ex 2: `acbcrxorzeh` → 3
+- [x] Ex 2: length written to column E for every employee, run from Validaciones → Conteo
 - [ ] Ex 3: aliases come from `https://hp-api.onrender.com/api/characters`
 - [ ] Ex 3: aliases are random and unique across all employees, written to column C
 - [ ] Ex 3: run from Validaciones → Alias

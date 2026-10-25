@@ -124,6 +124,14 @@ Paste the email from Exercise 4.
 
 Short notes on how the hash count works and how aliases stay unique.
 
+**Last change: no loop guard needed.** `onEdit` writes the timestamp into B1 with `setValue`. Google's triggers documentation states that script executions don't cause triggers to run, and gives this exact case as its example. So the B1 write can't fire `onEdit` again, and the code has no guard. I checked it in the Executions log: one `onEdit` run per manual edit, and none from the B1 write. A guard like "skip edits to B1" would protect against something that can't happen, and would stop a manual edit of B1 from being replaced by the timestamp. For the same reason, the menu runs (Conteo and Alias) don't update B1, because they are script writes and not someone editing the sheet.
+
+**Security count: cut the hash into runs.** `securityCount` reads the hash left to right and starts a new run every time a letter is not later in the alphabet than the previous one. Equal letters also break a run, because the next letter must come later. It then keeps the runs that contain a vowel and returns the longest length, or 0 if none has a vowel. For `acbcrxorzeh`, the runs are `ac`, `bcrx`, `orz` and `eh`. `bcrx` is the longest but has no vowel, so the result is 3 (`orz`). Checking only whole runs is enough: if a run has no vowel, no part of it has one, and if it has a vowel, the whole run is at least as long as any part of it.
+
+**Security count: no input validation.** The function takes any string and returns a number, which also covers the 11-letter worked example. I checked the data instead: all 100 hashes in column D are exactly 50 lowercase letters. A length check would have rejected the README's own example.
+
+**Security count: one read, one write.** `runConteo` reads all of column D with one `getValues()` call and writes all of column E with one `setValues()` call, rather than calling the Sheet once per row. Before running it in the Sheet, Claude checked the function in Node against a brute-force version that tests every substring, and the two gave the same result for all 100 hashes. I checked the worked example with `testSecurityCount` in the editor and compared four rows in the Sheet with the expected values.
+
 ---
 
 ## How I used AI
