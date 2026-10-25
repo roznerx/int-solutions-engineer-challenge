@@ -47,12 +47,12 @@ Requirements taken from `README.md`, grouped by the branch where each one is wor
 
 ## Part 2: Apps Script (`exercise/apps-script`)
 
-- [ ] Sheet created from the CSV and named `[Your name] Technical challenge - Apps Script`
-- [ ] Layout preserved: rows 1–2 blank, headers on row 3, data from row 4
+- [x] Sheet created from the CSV and named `[Your name] Technical challenge - Apps Script`
+- [x] Layout preserved: rows 1–2 blank, headers on row 3, data from row 4
 - [ ] No spreadsheet formulas anywhere
-- [ ] `Validaciones` menu with `Conteo` and `Alias`, visible after a reload
-- [ ] Ex 1: any edit writes the date and time into B1, replacing the previous value
-- [ ] Ex 1: the B1 write does not cause an update loop
+- [x] `Validaciones` menu with `Conteo` and `Alias`, visible after a reload
+- [x] Ex 1: any edit writes the date and time into B1, replacing the previous value
+- [x] Ex 1: the B1 write does not cause an update loop
 - [ ] Ex 2: function takes one 50-letter hash
 - [ ] Ex 2: finds the longest contiguous strictly increasing run (letters need not be adjacent in the alphabet)
 - [ ] Ex 2: the winning run contains at least one vowel
@@ -63,6 +63,7 @@ Requirements taken from `README.md`, grouped by the branch where each one is wor
 - [ ] Ex 3: run from Validaciones → Alias
 - [ ] Ex 4: email to the client developer covering technical and practical decisions, in `LOG.md`
 - [ ] `LOG.md`: Sheet URL and "Decisions worth knowing" (hash count, alias uniqueness)
+- [ ] `apps-script/Code.gs` matches the Sheet's script editor exactly, except for its "Reference copy" header line (own check, not a README requirement)
 
 ## Submission (`main`)
 

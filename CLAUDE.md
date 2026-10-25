@@ -62,7 +62,7 @@ The README forbids rewriting the site's dataLayer pushes. GTM must consume them 
 - The onEdit timestamp must not re-trigger itself when it writes B1.
 - Security count: find the longest contiguous strictly increasing letter run in the hash (letters need not be adjacent in the alphabet) that contains at least one vowel. Worked example: `acbcrxorzeh` → 3.
 - Aliases come from `https://hp-api.onrender.com/api/characters` and must be random and unique across all employees.
-- The Apps Script code lives in the Google Sheet, not in this repo, unless it gets added here for review.
+- The live Apps Script code is bound to the Google Sheet. `apps-script/Code.gs` is a reference copy for reviewers. The candidate pastes the editor's contents into it after each exercise works, and the two must match at the end of Part 2.
 
 ## Custom commands
 
