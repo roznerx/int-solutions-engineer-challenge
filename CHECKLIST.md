@@ -27,15 +27,15 @@ Requirements taken from `README.md`, grouped by the branch where each one is wor
 
 ## Part 1 · Exercise 2: Newsletter (`exercise/newsletter-tracking`)
 
-- [ ] Existing dataLayer pushes inspected for all three cases
-- [ ] Empty submission recorded
-- [ ] Non-email submission recorded
-- [ ] Valid email submission recorded
-- [ ] GA4 event implemented, based on the outcome and not on the click
-- [ ] Parameter for which form it was
-- [ ] Parameter for success or failure
-- [ ] Parameter for the failure reason (on errors)
-- [ ] Verified in Preview and DebugView
+- [x] Existing dataLayer pushes inspected for all three cases
+- [x] Empty submission recorded
+- [x] Non-email submission recorded
+- [x] Valid email submission recorded
+- [x] GA4 event implemented, based on the outcome and not on the click
+- [x] Parameter for which form it was
+- [x] Parameter for success or failure
+- [x] Parameter for the failure reason (on errors)
+- [x] Verified in Preview and DebugView
 
 ## Part 1 · Exercise 3: Email to the Director
 
