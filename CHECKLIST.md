@@ -37,11 +37,11 @@ Requirements taken from `README.md`, grouped by the branch where each one is wor
 - [x] Parameter for the failure reason (on errors)
 - [x] Verified in Preview and DebugView
 
-## Part 1 · Exercise 3: Email to the Director
+## Part 1 · Exercise 3: Email to the Director (`exercise/director-email`)
 
-- [ ] Written in English, in plain language, for a reader who doesn't write code
-- [ ] Explains why the approaches in Exercises 1 and 2 are worth doing
-- [ ] Pasted into `LOG.md`
+- [x] Written in English, in plain language, for a reader who doesn't write code
+- [x] Explains why the approaches in Exercises 1 and 2 are worth doing
+- [x] Pasted into `LOG.md`
 - [ ] "How you validated" section filled in (Preview and DebugView, both events)
 - [x] Container ID and measurement ID in `LOG.md`
 

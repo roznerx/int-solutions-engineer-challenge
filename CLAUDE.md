@@ -15,7 +15,7 @@ Claude is a pair-programming and learning assistant here, not the author. The ca
 ## Git
 
 - Never commit, push, merge, or create or switch branches. The candidate does all git operations.
-- `main` is the submission branch. Work happens on `exercise/gtm-add-to-cart`, `exercise/newsletter-tracking` and `exercise/apps-script`, each merged into `main` when finished. Check the current branch before working and keep changes scoped to it.
+- `main` is the submission branch. Work happens on `exercise/gtm-add-to-cart`, `exercise/newsletter-tracking`, `exercise/director-email` and `exercise/apps-script`, each merged into `main` when finished. Check the current branch before working and keep changes scoped to it.
 
 ## Progress
 

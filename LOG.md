@@ -15,7 +15,22 @@
 
 ### Email to the Director of Analytics
 
-Paste the English email from Exercise 3.
+**Subject:** Pipo Toys - Analytics Solutions
+
+Dear Director of Analytics,
+
+As requested, we have come up with solutions for the problems regarding the Pipo Toys website. We'll explain each of the selected approaches and why we think they are worth implementing.
+
+First, the "add to cart" problem. We solved it purely in Google Tag Manager (GTM), so no development work was needed on the site itself. This way, the tracking can be changed without any risk to how the site works or looks. The website already reports each "add to cart", but in its own format, which Google Analytics can't use for its ecommerce reports. We convert it to Google's standard format, so product and revenue reports work out of the box. Furthermore, this won't need maintenance if the catalogue changes. Each product now carries its 21% tax, and the cart value includes tax. Google's convention usually excludes tax, so please confirm which you prefer for reporting.
+
+Second, the "newsletter" issue. We have managed to track the outcomes of each submission instead of the clicks, which tells us whether each signup actually succeeded. Without care, a successful signup could be reported with the error from a previous failed attempt, which distorts the numbers. Our setup prevents that, so the results stay accurate. We also record why a submission failed (an empty field or an invalid email), which shows what to improve in the form. Again, this is done without affecting the site's overall functionality.
+
+We have tested both solutions in GTM's preview mode and in Google Analytics 4's live debug view. If you approve, we can move both changes to the live site. The only open decision is whether cart value should include tax. We're happy to walk you through either solution before we go live.
+
+Regards,
+
+Ignacio Elías Rosner  
+Semi-Senior Technical Solutions Engineering, Data
 
 ### How you validated
 
@@ -126,5 +141,6 @@ What I used it for:
 - **Planning:** turning the README into `CHECKLIST.md` and writing the project instructions in `CLAUDE.md`.
 - **Exercise 1:** it proposed the Custom HTML code. Before pasting it, I reviewed it with Claude line by line until I could explain each part, and my questions during that review led to two changes: wrapping the code in a function to avoid global variables, and copying item fields generically instead of listing them. Claude checked the tax rounding for every catalog price in Node, and I verified the results in Preview and DebugView. It also gave me a wrong branch status at first, which it caught itself when it read the files again; I fixed it with a fast-forward merge.
 - **Exercise 2:** working through the design step by step (Data Layer Variables, Lookup Table, Custom Event trigger, GA4 Event tag), and reviewing my Tag Assistant screenshots. It warned me in advance about the stale `formError` value, which I then reproduced in Preview, and its screenshot review caught the wrong variable in the tag. I built and tested everything in GTM and GA4 myself.
+- **Exercise 3:** I wrote the email myself. Claude reviewed it for accuracy and clarity over a few rounds, and I revised it. The main changes were correcting how I described the newsletter issue, adding the tax decision, and turning the closing into a clear request for approval.
 
 _To be completed as each exercise is finished._
