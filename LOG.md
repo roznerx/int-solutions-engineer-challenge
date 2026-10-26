@@ -132,6 +132,10 @@ Short notes on how the hash count works and how aliases stay unique.
 
 **Security count: one read, one write.** `runConteo` reads all of column D with one `getValues()` call and writes all of column E with one `setValues()` call, rather than calling the Sheet once per row. Before running it in the Sheet, Claude checked the function in Node against a brute-force version that tests every substring, and the two gave the same result for all 100 hashes. I checked the worked example with `testSecurityCount` in the editor and compared four rows in the Sheet with the expected values.
 
+**Aliases: remove duplicates, shuffle, take the first N.** `runAlias` fetches the characters once with `UrlFetchApp`. It keeps each non-empty name once, shuffles the list, and gives the first 100 names to the employees with one `setValues()` call. The API returns 437 characters but only 435 unique names, because "Lily Potter" and "James Potter" each appear twice. Uniqueness comes from removing duplicates before the shuffle, so there is no "already taken" check and no retry. If there are fewer unique names than employees, the script stops with an error and writes nothing, rather than repeating a name. Each run replaces all aliases with a new random set. The whole column is written at once, so new aliases can't clash with old ones.
+
+**Aliases: a simple shuffle that is knowingly uneven.** I shuffle with `sort(() => Math.random() - 0.5)` because it's short and widely recognized. It isn't perfectly even. In a Node test with 20,000 shuffles, the API's first name landed among the first 100 aliases 41.5% of the time, instead of the expected 23%. This doesn't affect uniqueness. If even randomness mattered, a Fisher–Yates shuffle would replace that one line; it measured 23.1% in the same test. Before running the code in the Sheet, Claude checked the logic in Node against the real API data: 1,000 runs, each with 100 unique, non-empty aliases. In the Sheet, I checked that column C was filled for rows 4–103, that the other columns and B1 were untouched, and that a second run changed the names.
+
 ---
 
 ## How I used AI
