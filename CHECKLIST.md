@@ -61,7 +61,7 @@ Requirements taken from `README.md`, grouped by the branch where each one is wor
 - [x] Ex 3: aliases come from `https://hp-api.onrender.com/api/characters`
 - [x] Ex 3: aliases are random and unique across all employees, written to column C
 - [x] Ex 3: run from Validaciones → Alias
-- [ ] Ex 4: email to the client developer covering technical and practical decisions, in `LOG.md`
+- [x] Ex 4: email to the client developer covering technical and practical decisions, in `LOG.md`
 - [ ] `LOG.md`: Sheet URL and "Decisions worth knowing" (hash count, alias uniqueness)
 - [ ] `apps-script/Code.gs` matches the Sheet's script editor exactly, except for its "Reference copy" header line (own check, not a README requirement)
 

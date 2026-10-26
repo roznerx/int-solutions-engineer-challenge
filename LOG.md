@@ -118,7 +118,22 @@ Per Claude's suggestion, I registered event-scoped custom dimensions in GA4 for 
 
 ### Email to the client developer
 
-Paste the email from Exercise 4.
+Dear Developer,
+
+We have finished implementing the requested solutions for your Google Spreadsheet. We'll explain the important technical and practical decisions made in each of the scripts.
+
+First is the "Last change" issue. We made a function that writes the timestamp of the last edit in the document in the B1 cell, which avoids updates in a loop. We followed Google's triggers documentation, which states that script executions don't cause triggers to run, so writing B1 doesn't fire the function again. We also decided against treating menu runs (Conteo and Alias) as updates, because they are scripts instead of manual edits done by an individual.
+
+Then, for the "Security count" issue, we made an algorithm that splits each received hash into runs through a for loop. A run keeps growing while each letter comes later in the alphabet than the previous one (they don't need to be next to each other), and every run is stored in an array. After the loop finishes, we filter that array to keep the runs with vowels, then select the longest of them. Checking only these full runs is enough, because if a run has no vowel, none of its parts have one either. Finally, the "Conteo de Seguridad" column is filled with the length of the best run, or 0 if no run has a vowel. We checked it against the example in the brief, "acbcrxorzeh", which returns 3.
+
+Finally, the "Alias" issue was the most critical to assess, since it had many caveats that could affect its functionality. We fetched the provided "Harry Potter" API and created a set of the characters' names, trimming the strings and filtering both empty entries and repeated names. That way, we reduced the possibilities of error, while also adding a validation in case the number of employees is greater than the number of unique names. In that case the script stops with an error and writes nothing, so no employee ends up with a blank or repeated alias. Today the API returns 437 characters but only 435 unique names, so that is the current limit. Then we shuffle the names with a random comparator, which is slightly uneven (names near the start of the API list come up more often) but simple, and it doesn't affect uniqueness. If you need an even spread, a Fisher–Yates shuffle can replace it without changing anything else. Keep in mind that every Alias run replaces all existing aliases. The first run will also ask for permission to connect to an external service, and since the API is on a free host, that first call can take a few seconds.
+
+We hope these solutions are clear, and we are happy to discuss them in depth if needed.
+
+Regards,
+
+Ignacio Elías Rosner  
+Semi-Senior Technical Solutions Engineering, Data
 
 ### Decisions worth knowing
 
