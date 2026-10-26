@@ -1,7 +1,5 @@
 # Challenge submission
 
-> Copy this file to `LOG.md` and complete it before you submit.
-
 **Candidate name:** Ignacio Elías Rosner  
 **Date completed:** 2026-10-25
 
@@ -33,8 +31,6 @@ Ignacio Elías Rosner
 Semi-Senior Technical Solutions Engineering, Data
 
 ### How you validated
-
-What you checked in GTM Preview and GA4 DebugView for add to cart and the newsletter.
 
 #### Add to cart (Exercise 1)
 
@@ -114,7 +110,7 @@ Per Claude's suggestion, I registered event-scoped custom dimensions in GA4 for 
 
 ## Part 2 — Apps Script
 
-**Google Sheet URL:**  
+**Google Sheet URL:** https://docs.google.com/spreadsheets/d/1L3X5H8wPHvN9ybvinJPbHAmzPDpkELSLOU1MKnC9MpI/edit?usp=sharing
 
 ### Email to the client developer
 
@@ -136,8 +132,6 @@ Ignacio Elías Rosner
 Semi-Senior Technical Solutions Engineering, Data
 
 ### Decisions worth knowing
-
-Short notes on how the hash count works and how aliases stay unique.
 
 **Last change: no loop guard needed.** `onEdit` writes the timestamp into B1 with `setValue`. Google's triggers documentation states that script executions don't cause triggers to run, and gives this exact case as its example. So the B1 write can't fire `onEdit` again, and the code has no guard. I checked it in the Executions log: one `onEdit` run per manual edit, and none from the B1 write. A guard like "skip edits to B1" would protect against something that can't happen, and would stop a manual edit of B1 from being replaced by the timestamp. For the same reason, the menu runs (Conteo and Alias) don't update B1, because they are script writes and not someone editing the sheet.
 
@@ -169,5 +163,8 @@ What I used it for:
 - **Exercise 1:** it proposed the Custom HTML code. Before pasting it, I reviewed it with Claude line by line until I could explain each part, and my questions during that review led to two changes: wrapping the code in a function to avoid global variables, and copying item fields generically instead of listing them. Claude checked the tax rounding for every catalog price in Node, and I verified the results in Preview and DebugView. It also gave me a wrong branch status at first, which it caught itself when it read the files again; I fixed it with a fast-forward merge.
 - **Exercise 2:** working through the design step by step (Data Layer Variables, Lookup Table, Custom Event trigger, GA4 Event tag), and reviewing my Tag Assistant screenshots. It warned me in advance about the stale `formError` value, which I then reproduced in Preview, and its screenshot review caught the wrong variable in the tag. I built and tested everything in GTM and GA4 myself.
 - **Exercise 3:** I wrote the email myself. Claude reviewed it for accuracy and clarity over a few rounds, and I revised it. The main changes were correcting how I described the newsletter issue, adding the tax decision, and turning the closing into a clear request for approval.
-
-_To be completed as each exercise is finished._
+- **Apps Script, Exercise 1:** Claude explained simple triggers and pointed me to Google's triggers documentation, which states that script executions don't cause triggers to run. That's why `onEdit` has no loop guard. I confirmed it in the Executions log.
+- **Apps Script, Exercise 2:** working through the "cut the hash into runs" approach until I could explain why checking only whole runs is enough. Claude checked the function in Node against a brute-force version for all 100 hashes, and I checked the worked example and four rows in the Sheet.
+- **Apps Script, Exercise 3:** I proposed the first approach (fetch the names, assign them, skip the ones already taken) and asked how it would handle a very large employee list. Claude suggested removing duplicates and shuffling instead, so uniqueness doesn't depend on checks or retries. I chose the `Math.random()` sort over Fisher–Yates knowing it is uneven, and Claude measured how uneven in Node. It also caught that my first paste nested `runAlias` inside itself, which is why nothing ran. I verified the result in the Sheet.
+- **Apps Script, Exercise 4:** I wrote the email myself. Claude reviewed it over two rounds, and the main additions were what happens when there aren't enough names, the 435-name limit, the overwrite on each run, and the permission prompt on the first run.
+- **`Code.gs`:** Claude kept `apps-script/Code.gs` in sync with what I pasted from the editor, and I checked at the end that both match.

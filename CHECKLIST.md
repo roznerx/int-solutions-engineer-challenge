@@ -42,14 +42,14 @@ Requirements taken from `README.md`, grouped by the branch where each one is wor
 - [x] Written in English, in plain language, for a reader who doesn't write code
 - [x] Explains why the approaches in Exercises 1 and 2 are worth doing
 - [x] Pasted into `LOG.md`
-- [ ] "How you validated" section filled in (Preview and DebugView, both events)
+- [x] "How you validated" section filled in (Preview and DebugView, both events)
 - [x] Container ID and measurement ID in `LOG.md`
 
 ## Part 2: Apps Script (`exercise/apps-script`)
 
 - [x] Sheet created from the CSV and named `[Your name] Technical challenge - Apps Script`
 - [x] Layout preserved: rows 1–2 blank, headers on row 3, data from row 4
-- [ ] No spreadsheet formulas anywhere
+- [x] No spreadsheet formulas anywhere
 - [x] `Validaciones` menu with `Conteo` and `Alias`, visible after a reload
 - [x] Ex 1: any edit writes the date and time into B1, replacing the previous value
 - [x] Ex 1: the B1 write does not cause an update loop
@@ -62,8 +62,8 @@ Requirements taken from `README.md`, grouped by the branch where each one is wor
 - [x] Ex 3: aliases are random and unique across all employees, written to column C
 - [x] Ex 3: run from Validaciones → Alias
 - [x] Ex 4: email to the client developer covering technical and practical decisions, in `LOG.md`
-- [ ] `LOG.md`: Sheet URL and "Decisions worth knowing" (hash count, alias uniqueness)
-- [ ] `apps-script/Code.gs` matches the Sheet's script editor exactly, except for its "Reference copy" header line (own check, not a README requirement)
+- [x] `LOG.md`: Sheet URL and "Decisions worth knowing" (hash count, alias uniqueness)
+- [x] `apps-script/Code.gs` matches the Sheet's script editor exactly, except for its "Reference copy" header line (own check, not a README requirement)
 
 ## Submission (`main`)
 
@@ -71,5 +71,5 @@ Requirements taken from `README.md`, grouped by the branch where each one is wor
 - [ ] GTM container shared with `douglas.franquiz@monks.com` and `ivan.pfaab@monks.com` (Edit or higher)
 - [ ] GA4 property shared with both (Editor or higher)
 - [ ] Sheet shared with both (edit access)
-- [ ] `LOG.md` complete (name, date, all sections)
+- [x] `LOG.md` complete (name, date, all sections)
 - [ ] Hiring team invited as collaborators on the fork
