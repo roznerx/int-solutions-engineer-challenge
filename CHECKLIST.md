@@ -68,8 +68,8 @@ Requirements taken from `README.md`, grouped by the branch where each one is wor
 ## Submission (`main`)
 
 - [x] Container exported (Admin → Export Container) and the `.json` committed
-- [ ] GTM container shared with `douglas.franquiz@monks.com` and `ivan.pfaab@monks.com` (Edit or higher)
-- [ ] GA4 property shared with both (Editor or higher)
-- [ ] Sheet shared with both (edit access)
+- [x] GTM container shared with `douglas.franquiz@monks.com` and `ivan.pfaab@monks.com` (Edit or higher)
+- [x] GA4 property shared with both (Editor or higher)
+- [x] Sheet shared with both (edit access)
 - [x] `LOG.md` complete (name, date, all sections)
-- [ ] Hiring team invited as collaborators on the fork
+- [x] Hiring team invited as collaborators on the fork
